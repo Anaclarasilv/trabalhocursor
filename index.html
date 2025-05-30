@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Restaurante</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container mt-4">
+        <!-- Navegação por tabs -->
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" id="clientes-tab" data-toggle="tab" href="#clientes" role="tab">Clientes</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="comidas-tab" data-toggle="tab" href="#comidas" role="tab">Comidas</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="servicos-tab" data-toggle="tab" href="#servicos" role="tab">Serviços</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="movimentos-tab" data-toggle="tab" href="#movimentos" role="tab">Movimentos</a>
+            </li>
+        </ul>
+
+        <!-- Conteúdo das tabs -->
+        <div class="tab-content" id="myTabContent">
+            <!-- Tab Clientes -->
+            <div class="tab-pane fade show active" id="clientes" role="tabpanel">
+                <div class="card mt-3">
+                    <div class="card-body">
+                        <h5 class="card-title">Cadastro de Clientes</h5>
+                        <form id="formCliente">
+                            <div class="form-group">
+                                <label for="nomeCliente">Nome</label>
+                                <input type="text" class="form-control" id="nomeCliente" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="telefoneCliente">Telefone</label>
+                                <input type="tel" class="form-control" id="telefoneCliente" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="cpfCliente">CPF</label>
+                                <input type="text" class="form-control" id="cpfCliente" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="dataNascCliente">Data de Nascimento</label>
+                                <input type="date" class="form-control" id="dataNascCliente" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Salvar Cliente</button>
+                        </form>
+                        <div class="mt-4">
+                            <h6>Clientes Cadastrados</h6>
+                            <div class="table-responsive">
+                                <table class="table" id="tabelaClientes">
+                                    <thead>
+                                        <tr>
+                                            <th>ID</th>
+                                            <th>Nome</th>
+                                            <th>Telefone</th>
+                                            <th>CPF</th>
+                                            <th>Data Nasc.</th>
+                                            <th>Ações</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody></tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab Comidas -->
+            <div class="tab-pane fade" id="comidas" role="tabpanel">
+                <div class="card mt-3">
+                    <div class="card-body">
+                        <h5 class="card-title">Cadastro de Comidas</h5>
+                        <form id="formComida">
+                            <div class="form-group">
+                                <label for="nomePrato">Nome do Prato</label>
+                                <input type="text" class="form-control" id="nomePrato" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="bebidas">Bebidas</label>
+                                <input type="text" class="form-control" id="bebidas" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="acompanhamento">Acompanhamento</label>
+                                <input type="text" class="form-control" id="acompanhamento" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Salvar Comida</button>
+                        </form>
+                        <div class="mt-4">
+                            <h6>Comidas Cadastradas</h6>
+                            <div class="table-responsive">
+                                <table class="table" id="tabelaComidas">
+                                    <thead>
+                                        <tr>
+                                            <th>ID</th>
+                                            <th>Prato</th>
+                                            <th>Bebidas</th>
+                                            <th>Acompanhamento</th>
+                                            <th>Ações</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody></tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab Serviços -->
+            <div class="tab-pane fade" id="servicos" role="tabpanel">
+                <div class="card mt-3">
+                    <div class="card-body">
+                        <h5 class="card-title">Cadastro de Serviços</h5>
+                        <form id="formServico">
+                            <div class="form-group">
+                                <label for="descricaoServico">Descrição</label>
+                                <input type="text" class="form-control" id="descricaoServico" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="precoServico">Preço</label>
+                                <input type="number" step="0.01" class="form-control" id="precoServico" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Salvar Serviço</button>
+                        </form>
+                        <div class="mt-4">
+                            <h6>Serviços Cadastrados</h6>
+                            <div class="table-responsive">
+                                <table class="table" id="tabelaServicos">
+                                    <thead>
+                                        <tr>
+                                            <th>ID</th>
+                                            <th>Descrição</th>
+                                            <th>Preço</th>
+                                            <th>Ações</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody></tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab Movimentos -->
+            <div class="tab-pane fade" id="movimentos" role="tabpanel">
+                <div class="card mt-3">
+                    <div class="card-body">
+                        <h5 class="card-title">Registro de Movimentos</h5>
+                        <form id="formMovimento">
+                            <div class="form-group">
+                                <label for="clienteMovimento">Cliente</label>
+                                <select class="form-control" id="clienteMovimento" required></select>
+                            </div>
+                            <div class="form-group">
+                                <label for="comidaMovimento">Comida</label>
+                                <select class="form-control" id="comidaMovimento" required></select>
+                            </div>
+                            <div class="form-group">
+                                <label>Tipos de Serviços</label>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="Delivery" id="servicoDelivery">
+                                    <label class="form-check-label" for="servicoDelivery">Delivery</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="Retirada" id="servicoRetirada">
+                                    <label class="form-check-label" for="servicoRetirada">Retirada</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="Rodízio" id="servicoRodizio">
+                                    <label class="form-check-label" for="servicoRodizio">Rodízio</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="Eventos" id="servicoEventos">
+                                    <label class="form-check-label" for="servicoEventos">Eventos e Reservas</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="MenuKids" id="servicoMenuKids">
+                                    <label class="form-check-label" for="servicoMenuKids">Menu Kids</label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Forma de Pagamento</label>
+                                <select class="form-control" id="formaPagamento" required>
+                                    <option value="">Selecione...</option>
+                                    <option value="credito">Cartão de Crédito</option>
+                                    <option value="debito">Cartão de Débito</option>
+                                    <option value="pix">PIX</option>
+                                    <option value="dinheiro">Dinheiro</option>
+                                    <option value="vale">Vale-refeição</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Registrar Movimento</button>
+                        </form>
+                        <div class="mt-4">
+                            <h6>Movimentos Registrados</h6>
+                            <div class="table-responsive">
+                                <table class="table" id="tabelaMovimentos">
+                                    <thead>
+                                        <tr>
+                                            <th>ID</th>
+                                            <th>Cliente</th>
+                                            <th>Comida</th>
+                                            <th>Serviços</th>
+                                            <th>Pagamento</th>
+                                            <th>Total</th>
+                                            <th>Ações</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody></tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Mensagens -->
+    <div class="modal fade" id="mensagemModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Mensagem</h5>
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span>&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div id="mensagemConteudo"></div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html> 

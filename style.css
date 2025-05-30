@@ -1,0 +1,47 @@
+.card {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.table th {
+    background-color: #f8f9fa;
+}
+
+.btn-action {
+    margin: 0 2px;
+}
+
+.alert {
+    margin-top: 1rem;
+}
+
+.form-check {
+    margin-bottom: 0.5rem;
+}
+
+.tab-content {
+    padding-bottom: 2rem;
+}
+
+.modal-header {
+    background-color: #f8f9fa;
+}
+
+/* Responsividade para telas pequenas */
+@media (max-width: 576px) {
+    .container {
+        padding: 10px;
+    }
+    
+    .card {
+        margin: 10px 0;
+    }
+    
+    .btn {
+        margin-bottom: 5px;
+        width: 100%;
+    }
+    
+    .table-responsive {
+        margin-bottom: 1rem;
+    }
+} 
